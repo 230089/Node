@@ -5,4 +5,12 @@ services:
 script:
     - docker build -t audry/node .
     - docker images audry/Node
+before_deploy:
+  - docker login -u DOCKER_USERNAME  -p DOCKER_PASSWORD
+
+deploy:
+  provider: script
+  script: docker push DOCKER_USERNAME/Node
+  on:
+    branch: master
 
