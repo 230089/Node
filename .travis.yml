@@ -4,7 +4,7 @@ services:
 
 script:
     - docker build -t audry/node .
-    - docker images 230089/Node
+    - docker images audry/node
 before_deploy:
   - docker login -u DOCKER_USERNAME  -p PASSWORD
 
