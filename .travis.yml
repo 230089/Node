@@ -6,7 +6,7 @@ script:
     - docker build -t audry/node .
     - docker images audry/Node
 before_deploy:
-  - docker login -u DOCKER_USERNAME  -p DOCKER_PASSWORD
+  - docker login -u DOCKER_USERNAME  -p PASSWORD
 
 deploy:
   provider: script
